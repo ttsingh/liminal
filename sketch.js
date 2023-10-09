@@ -2,11 +2,11 @@ var bugSize = 45;
 var canvasWidth, canvasHeight;
 var bugX, bugY;
 var img;
-var numObstacles = 17;
+var numObstacles = 37;
 
 var obstacles = [];
 var obstacleSpeed = 5;
-var minDistance = bugSize + 5;
+var minDistance = bugSize + 27;
 
 var score = 0;
 
@@ -22,7 +22,7 @@ function setup() {
   obs8=loadImage("img/108.png");
   obs9=loadImage("img/109.png");
 
-  canvasWidth = bugSize * 15;
+  canvasWidth = bugSize * 29;
   canvasHeight = bugSize * 10;
   createCanvas(canvasWidth, canvasHeight);
   bugX = bugSize - (bugSize / 2);

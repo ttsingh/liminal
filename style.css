@@ -6,7 +6,14 @@ html {
 body{
   margin: 0;
   padding: 0;
+  background-color:#1D3233;
 }
 canvas {
   display: block;
+}
+
+.glitch{
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
 }
