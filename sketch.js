@@ -2,16 +2,26 @@ var bugSize = 45;
 var canvasWidth, canvasHeight;
 var bugX, bugY;
 var img;
-var numObstacles = 10;
+var numObstacles = 17;
 
 var obstacles = [];
-var obstacleSpeed = 3; // Adjust the speed as needed
-var minDistance = bugSize + 5; // Minimum distance between obstacles
+var obstacleSpeed = 5;
+var minDistance = bugSize + 5;
 
-var score = 0; // Initialize the score
+var score = 0;
 
 function setup() {
   img = loadImage("img/bug.png");
+  obs1=loadImage("img/101.png");
+  obs2=loadImage("img/102.png");
+  obs3=loadImage("img/103.png");
+  obs4=loadImage("img/104.png");
+  obs5=loadImage("img/105.png");
+  obs6=loadImage("img/106.png");
+  obs7=loadImage("img/107.png");
+  obs8=loadImage("img/108.png");
+  obs9=loadImage("img/109.png");
+
   canvasWidth = bugSize * 15;
   canvasHeight = bugSize * 10;
   createCanvas(canvasWidth, canvasHeight);
@@ -23,13 +33,11 @@ function setup() {
     var obstacleX, obstacleY;
     var validPosition = false;
 
-    // Keep trying until a valid position is found
     while (!validPosition) {
       obstacleX = floor(random(canvasWidth / bugSize)) * bugSize;
       obstacleY = floor(random(canvasHeight / bugSize)) * bugSize;
       validPosition = true;
 
-      // Check for collisions with other obstacles
       for (var j = 0; j < obstacles.length; j++) {
         var d = dist(obstacleX, obstacleY, obstacles[j].x, obstacles[j].y);
         if (d < minDistance) {
@@ -52,26 +60,21 @@ function draw() {
     fill(72, 104, 98);
     rect(obstacles[i].x, obstacles[i].y, bugSize, bugSize + 50);
 
-    // Update obstacle positions (only in the y-direction)
     obstacles[i].y += obstacles[i].ySpeed;
 
-    // Check for collisions with screen edges and reverse direction if needed
     if (obstacles[i].y < 0 || obstacles[i].y + bugSize > canvasHeight) {
       obstacles[i].ySpeed *= -1;
     }
 
-    // Check for collisions with your character
     if (
       bugX + bugSize / 2 > obstacles[i].x &&
       bugX - bugSize / 2 < obstacles[i].x + bugSize &&
       bugY + bugSize / 2 > obstacles[i].y &&
       bugY - bugSize / 2 < obstacles[i].y + bugSize
     ) {
-      // Handle collision with your character here (e.g., decrease score)
-      // For now, we'll just reverse the obstacle's direction when there's a collision
+
       obstacles[i].ySpeed *= -1;
 
-      // Decrease the score when there's a collision
       score -= 1;
     }
   }
@@ -79,10 +82,9 @@ function draw() {
   fill(0);
   image(img, bugX, bugY, bugSize, bugSize);
 
-  // Display the score on the canvas
   textSize(17);
   fill(255);
-  text("Sanity: " + score, 20, 30);
+  text("sanity: " + score, 20, 30);
 }
 
 function keyPressed() {
@@ -115,8 +117,7 @@ function keyPressed() {
   if (canMove) {
     bugX = newX;
     bugY = newY;
-
-    // Increase the score when the character moves without collision
+    
     score += 1;
   }
 }
