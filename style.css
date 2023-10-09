@@ -11,9 +11,3 @@ body{
 canvas {
   display: block;
 }
-
-.glitch{
-  justify-content: center;
-  text-align: center;
-  z-index: 0;
-}
