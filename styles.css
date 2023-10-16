@@ -3,15 +3,12 @@ html {
   padding: 0;
 }
 
-body{
+body .page1{
   margin: 0;
   padding: 0;
-  background-color:#1D3233;
+  background-color: black;
 }
 canvas {
   display: block;
 }
 
-#one{
-  background-color: black;
-}
