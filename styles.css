@@ -3,12 +3,22 @@ html {
   padding: 0;
 }
 
-body .page1{
+
+body{
   margin: 0;
   padding: 0;
-  background-color: black;
-}
-canvas {
-  display: block;
+  display: flex;
 }
 
+.page1{
+  background-color: black;
+}
+
+canvas {
+  display: flex;
+  z-index: 10;
+}
+
+.page2{
+  background-color: teal;
+}
