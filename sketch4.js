@@ -1,15 +1,14 @@
-let foundTheSquare = false;
-let imgSquare;
-let imgCircle;
-let squareX, squareY;
+var foundTheSquare = false;
+var imgSquare;
+var imgCircle;
 
 function preload() {
-  imgSquare = loadImage('img/cat.png'); // Make sure the path to 'cat.png' is correct
-  imgCircle = loadImage('img/stand.png'); // Make sure the path to 'stand.png' is correct
+  imgSquare = loadImage('cat.png');
+  imgCircle = loadImage('stand.png');
 }
 
 function setup() {
-  createCanvas(1440, 900);
+  createCanvas(500, 400);
   squareX = random(width - imgSquare.width / 2);
   squareY = random(height - imgSquare.height / 2);
   rectMode(CENTER);
@@ -19,24 +18,18 @@ function draw() {
   if (!foundTheSquare) {
     background(0);
     image(imgCircle, mouseX - imgCircle.width / 2, mouseY - imgCircle.height / 2);
-    image(imgSquare, squareX, squareY);
+    image(imgSquare, squareX - imgSquare.width / 2, squareY - imgSquare.height / 2);
   } else {
     background(200);
     textSize(32);
     textAlign(CENTER);
-    text("You found the square", width / 2, height / 2);
+    text("you found the square", width / 2, height / 2);
   }
 }
 
 function mouseClicked() {
-  const halfWidth = imgSquare.width / 2;
-  const halfHeight = imgSquare.height / 2;
-  if (
-    mouseX > squareX - halfWidth &&
-    mouseX < squareX + halfWidth &&
-    mouseY > squareY - halfHeight &&
-    mouseY < squareY + halfHeight
-  ) {
+  if (mouseX > squareX - imgSquare.width / 2 && mouseX < squareX + imgSquare.width / 2 &&
+    mouseY > squareY - imgSquare.height / 2 && mouseY < squareY + imgSquare.height / 2) {
     foundTheSquare = true;
   }
 }
