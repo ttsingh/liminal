@@ -8,7 +8,7 @@ var characterY;
 var characterSpeed = 25;
 
 function setup() {
-  createCanvas(1470, 700);
+  createCanvas(1415, 700);
   noStroke();
 
   characterImg = loadImage("img/buggg.png");

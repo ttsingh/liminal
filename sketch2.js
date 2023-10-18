@@ -15,7 +15,7 @@ var score = 0;
 function setup() {
   img = loadImage("img/bug-one.svg");
 
-  canvasWidth = bugSize * 33;
+  canvasWidth = bugSize * 31.5;
   canvasHeight = bugSize * 13;
   createCanvas(canvasWidth, canvasHeight);
   bugX = bugSize - (bugSize / 2);

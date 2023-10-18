@@ -9,7 +9,6 @@ function preload() {
 
 function setup() {
   createCanvas(1440, 500);
-  //randomize the square location
   squareX = random(width - imgSquare.width / 2);
   squareY = random(height - imgSquare.height / 2);
   rectMode(CENTER);
