@@ -3,6 +3,10 @@ html {
   padding: 0;
 }
 
+canvas {
+  display: flex;
+  z-index: 10;
+}
 
 body{
   margin: 0;
@@ -11,23 +15,17 @@ body{
 }
 
 .page1{
+  position: relative;
 background-image: url(img/pp1.gif);
 background-color: black;
+background-size: cover;
 }
 
-.pie img{
-  justify-content: center;
-  z-index: 0;
-
-}
-
-canvas {
-  display: flex;
-  z-index: 10;
-}
-
-.pp2 a{
-  z-index: 10;
-  justify-content: center;
+#element {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; 
+  z-index: 10;
 }
