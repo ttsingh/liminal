@@ -12,7 +12,7 @@ function setup() {
   noStroke();
 
   characterImg = loadImage("img/buggg.png");
-  obstacleImg = loadImage("img/23.svg");
+  obstacleImg = loadImage("img/kill.svg");
 
   characterX = width / 2;
   characterY = height / 2;
@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(149, 39, 39);
+  background(56, 32, 40);
 
   for (let i = obstacles.length - 1; i >= 0; i--) {
     obstacles[i].move();
