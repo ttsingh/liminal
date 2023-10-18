@@ -75,6 +75,7 @@ function draw() {
 
   textSize(17);
   fill(255);
+  textFont('monospace');
   text("sanity: " + score, 20, 30);
 }
 
