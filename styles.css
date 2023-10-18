@@ -102,3 +102,11 @@ line-height: normal;
 .page4{
   background-color: black;
 }
+
+#element5{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

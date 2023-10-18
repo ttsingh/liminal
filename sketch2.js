@@ -13,7 +13,7 @@ var minDistance = bugSize + 27;
 var score = 0;
 
 function setup() {
-  img = loadImage("img/buggg.svg");
+  img = loadImage("img/bug-one.svg");
 
   canvasWidth = bugSize * 33;
   canvasHeight = bugSize * 13;
