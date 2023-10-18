@@ -24,7 +24,7 @@ function draw() {
     background(255, 255, 255);
     textSize(32);
     textAlign(CENTER);
-    text("you found the cat", width / 2, height / 2);
+    text("(o_0)", width / 2, height / 2);
   }
 }
 

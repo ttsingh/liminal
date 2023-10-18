@@ -100,3 +100,9 @@ line-height: normal;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.page6{
+  position: relative;
+  background-image: url(img/quit.png);
+  background-size: cover;
+}
