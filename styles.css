@@ -22,3 +22,8 @@ canvas {
 .page2{
   background-color: teal;
 }
+
+.pp2 h2{
+  z-index: 10;
+  color: beige;
+}
