@@ -26,11 +26,8 @@ canvas {
   z-index: 10;
 }
 
-.page2{
-  background-color: teal;
-}
-
-.pp2 h2{
+.pp2 a{
   z-index: 10;
-  color: beige;
+  justify-content: center;
+  position: absolute;
 }
