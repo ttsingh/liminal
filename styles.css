@@ -4,8 +4,7 @@ html {
 }
 
 canvas {
-  display: flex;
-  z-index: 10;
+  display: block;
 }
 
 body{
@@ -14,8 +13,10 @@ body{
   display: flex;
 }
 
+/* index page */
+
 .page1{
-  position: relative;
+position: relative;
 background-image: url(img/pp1.gif);
 background-color: black;
 background-size: cover;
@@ -23,9 +24,13 @@ background-size: cover;
 
 #element {
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none; 
-  z-index: 10;
+}
+
+/* page2 first js */
+.page2{
+  background-color: black;
 }
