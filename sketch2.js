@@ -2,20 +2,21 @@ var bugSize = 45;
 var canvasWidth, canvasHeight;
 var bugX, bugY;
 var img;
-var numObstacles = 37;
+var customFonts;
+var numObstacles = 41;
+var canvas = document.getElementById("myCanvas1");
 
 var obstacles = [];
-var obstacleSpeed = 5;
+var obstacleSpeed = 5.5;
 var minDistance = bugSize + 27;
 
 var score = 0;
 
 function setup() {
-  img = loadImage("img/bug.png");
+  img = loadImage("img/buggg.svg");
 
-
-  canvasWidth = bugSize * 32;
-  canvasHeight = bugSize * 11;
+  canvasWidth = bugSize * 33;
+  canvasHeight = bugSize * 13;
   createCanvas(canvasWidth, canvasHeight);
   bugX = bugSize - (bugSize / 2);
   bugY = canvasHeight - (bugSize / 2);
@@ -64,15 +65,13 @@ function draw() {
       bugY + bugSize / 2 > obstacles[i].y &&
       bugY - bugSize / 2 < obstacles[i].y + bugSize
     ) {
-
       obstacles[i].ySpeed *= -1;
-
       score -= 1;
     }
   }
 
   fill(0);
-  image(img, bugX, bugY, bugSize, bugSize);
+  image(img, bugX, bugY, img.width, img.height); // Use the original image size
 
   textSize(17);
   fill(255);
@@ -109,7 +108,6 @@ function keyPressed() {
   if (canMove) {
     bugX = newX;
     bugY = newY;
-    
     score += 1;
   }
 }

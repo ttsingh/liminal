@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Just+Me+Again+Down+Here&display=swap');
+
 html {
   margin: 0;
   padding: 0;
@@ -34,3 +36,65 @@ background-size: cover;
 .page2{
   background-color: black;
 }
+
+#canvas1 {
+  display: flex;
+  justify-content: center;
+  left: 50%;
+}
+
+#element3{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page3{
+  background-color: black;
+}
+
+.content h3{
+color: #FFF;
+font-family: Just Me Again Down Here;
+font-size: 43px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.content p{
+  color: #FFF;
+  font-family:monospace;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+
+  #element4{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .content3 h3{
+    color: #FFF;
+    font-family: Just Me Again Down Here;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+    
+    .content3 p{
+      color: #FFF;
+      font-family:monospace;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      }
