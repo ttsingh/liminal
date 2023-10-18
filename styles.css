@@ -13,6 +13,7 @@ body{
   margin: 0;
   padding: 0;
   display: flex;
+  background-color: black;
 }
 
 /* index page */
@@ -20,7 +21,6 @@ body{
 .page1{
 position: relative;
 background-image: url(img/pp1.gif);
-background-color: black;
 background-size: cover;
 }
 
@@ -33,10 +33,6 @@ background-size: cover;
 }
 
 /* page2 first js */
-.page2{
-  background-color: black;
-}
-
 #canvas1 {
   display: flex;
   justify-content: center;
@@ -51,9 +47,6 @@ background-size: cover;
   transform: translate(-50%, -50%);
 }
 
-.page3{
-  background-color: black;
-}
 
 .content h3{
 color: #FFF;
@@ -99,11 +92,8 @@ line-height: normal;
       line-height: normal;
       }
 
-.page4{
-  background-color: black;
-}
 
-#element4{
+#element5{
   position: absolute;
   z-index: 10;
   top: 50%;
