@@ -12,18 +12,10 @@ var score = 0;
 
 function setup() {
   img = loadImage("img/bug.png");
-  obs1=loadImage("img/101.png");
-  obs2=loadImage("img/102.png");
-  obs3=loadImage("img/103.png");
-  obs4=loadImage("img/104.png");
-  obs5=loadImage("img/105.png");
-  obs6=loadImage("img/106.png");
-  obs7=loadImage("img/107.png");
-  obs8=loadImage("img/108.png");
-  obs9=loadImage("img/109.png");
 
-  canvasWidth = bugSize * 29;
-  canvasHeight = bugSize * 10;
+
+  canvasWidth = bugSize * 32;
+  canvasHeight = bugSize * 11;
   createCanvas(canvasWidth, canvasHeight);
   bugX = bugSize - (bugSize / 2);
   bugY = canvasHeight - (bugSize / 2);
