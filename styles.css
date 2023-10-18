@@ -11,7 +11,14 @@ body{
 }
 
 .page1{
-  background-color: black;
+background-image: url(img/pp1.gif);
+background-color: black;
+}
+
+.pie img{
+  justify-content: center;
+  z-index: 0;
+
 }
 
 canvas {
